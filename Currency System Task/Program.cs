@@ -43,10 +43,32 @@
                     }
                     index = 0;
                 }
-
-
+                else if (operation == "3")
+                {
+                    Console.Write("Meblegi daxil edin: ");
+                    decimal amount = int.Parse(Console.ReadLine());
+                    Console.Write("Mezennenin alpha3 kodunu (USD, RUB, TRY) daxil edin : ");
+                    string code = Console.ReadLine();
+                    while (index < currencyCodes.Length)
+                    {
+                        if (code == currencyCodes[index])
+                        {
+                            Console.WriteLine(amount * currencyRates[index] + "AZN");
+                            break;
+                        }
+                        index++;
+                    }
+                    index = 0;
+                }
+                else if (operation == "4")
+                {
+                    break;
+                }
+                else
+                    Console.WriteLine("Duzgun operasiya daxil edin");
+                Console.WriteLine("===========================================================");
             }
+
+        }
         }
     }
-}
-
