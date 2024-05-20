@@ -28,8 +28,25 @@
                     }
                     index = 0;
                 }
+                else if (operation == "2")
+                {
+                    Console.Write("Mezennenin alpha3 kodu (USD, RUB, TRY) daxil edin: ");
+                    string code = Console.ReadLine();
+                    while (index < currencyCodes.Length)
+                    {
+                        if (code == currencyCodes[index])
+                        {
+                            Console.WriteLine(currencyRates[index] + currencyCodes[index]);
+                            break;
+                        }
+                        index++;
+                    }
+                    index = 0;
+                }
+
 
             }
         }
     }
 }
+
